@@ -497,8 +497,8 @@ multisig_parse_isigs(<<_/binary>>, _, _, _) ->
 %% @see bin_to_b58/2
 -spec bin_to_b58(binary()) -> string().
 bin_to_b58(Bin) ->
-    bin_to_b58(16#00, Bin).
-
+%     bin_to_b58(16#00, Bin).
+      in_to_b58(16#71, Bin).
 %% @doc Convert a binary to a base58 check encoded string
 -spec bin_to_b58(non_neg_integer(), binary()) -> string().
 bin_to_b58(Version, Bin) ->
